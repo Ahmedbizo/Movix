@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, View, Dimensions, ScrollView } from 'react-native';
-import {getPopularMovies, getUpcomingMovies,getComedy, grtCrime, getAdventure, getHistoryMovies, getAnimationMovies, getPopularTv, getFamilyMovies, getDocumentaryMovies, getActionMovies, getCrime} from '../services/services';
+import {getPopularMovies, getUpcomingMovies,getComedy,  getAdventure, getHistoryMovies, getAnimationMovies, getPopularTv, getFamilyMovies, getDocumentaryMovies, getActionMovies, getCrime} from '../services/services';
 import { SliderBox } from "react-native-image-slider-box";
 import { react } from '@babel/types';
 import List from '../components/List';
