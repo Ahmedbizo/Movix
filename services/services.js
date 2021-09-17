@@ -56,5 +56,10 @@ export const getFamilyMovies = async () => {
 
   };
 
+  export const getCrime = async () => {
+      const resp = await axios.get(`${apiUrl}/discover/movie?${apiKey}&with_genres=80`);
+      return resp.data.results;
+  };
+
 
   
