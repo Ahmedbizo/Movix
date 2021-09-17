@@ -173,6 +173,9 @@ const Home = () => {
     <List title="Comedy " content={comedy}></List>
     </View>
 
+    <View style={styles.carousel}>
+        <List title="Crime Movies " content={crime}></List>
+    </View>
    
 
     
