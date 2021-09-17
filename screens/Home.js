@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, View, Dimensions, ScrollView } from 'react-native';
-import {getPopularMovies, getUpcomingMovies, getAdventure, getHistoryMovies, getAnimationMovies, getPopularTv, getFamilyMovies, getDocumentaryMovies, getActionMovies} from '../services/services';
+import {getPopularMovies, getUpcomingMovies,getComedy, getAdventure, getHistoryMovies, getAnimationMovies, getPopularTv, getFamilyMovies, getDocumentaryMovies, getActionMovies} from '../services/services';
 import { SliderBox } from "react-native-image-slider-box";
 import { react } from '@babel/types';
 import List from '../components/List';
@@ -20,6 +20,7 @@ const Home = () => {
     const [animationMovies ,setAnimationMovies] = useState('');
     const [historyMovies ,setHistoryMovies] = useState('');
     const [adventure ,setAdventure] = useState('');
+    const [comedy , setComedy] = useState ('');
     const [error,setError] = useState(false);
 
 
@@ -102,6 +103,12 @@ const Home = () => {
            setError(err);
        });
 
+       getComedy().then(movies =>{
+           setComedy(movies)
+       }) . catch(err => {
+           setError(err)
+       });
+
 
   } ,[] )
 
@@ -151,6 +158,12 @@ const Home = () => {
 
     <View style={styles.carousel}>
         <List title= " Adventure"   content={adventure}></List>
+    </View>
+
+
+    <View style={styles.carousel}>
+    
+    <List title="Comedy " content={comedy}></List>
     </View>
 
    
