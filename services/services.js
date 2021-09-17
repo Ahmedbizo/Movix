@@ -61,5 +61,10 @@ export const getFamilyMovies = async () => {
       return resp.data.results;
   };
 
+  export const getDrama = async () => {
+    const resp = await axios.get (`${apiUrl}/discover/movie?${apiKey}&with_genres=18`); 
+    return resp.data.results;
+  };
+
 
   
