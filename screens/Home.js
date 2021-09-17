@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, View, Dimensions, ScrollView } from 'react-native';
-import {getPopularMovies, getUpcomingMovies, getHistoryMovies, getAnimationMovies, getPopularTv, getFamilyMovies, getDocumentaryMovies, getActionMovies} from '../services/services';
+import {getPopularMovies, getUpcomingMovies, getAdventure, getHistoryMovies, getAnimationMovies, getPopularTv, getFamilyMovies, getDocumentaryMovies, getActionMovies} from '../services/services';
 import { SliderBox } from "react-native-image-slider-box";
 import { react } from '@babel/types';
 import List from '../components/List';
@@ -19,6 +19,7 @@ const Home = () => {
     const [actionMovies ,setActionMovies] = useState('');
     const [animationMovies ,setAnimationMovies] = useState('');
     const [historyMovies ,setHistoryMovies] = useState('');
+    const [adventure ,setAdventure] = useState('');
     const [error,setError] = useState(false);
 
 
@@ -94,6 +95,14 @@ const Home = () => {
        } ).catch(err =>{
          setError(err);
        } );
+
+       getAdventure().then(movies => {
+        setAdventure(movies)
+       } ) . catch(err =>{
+           setError(err);
+       });
+
+
   } ,[] )
 
 
@@ -138,6 +147,10 @@ const Home = () => {
 
     <View style={styles.carousel}>
         <List title= "Documentary Movies  " content={documentaryMovies}></List>
+    </View>
+
+    <View style={styles.carousel}>
+        <List title= " Adventure"   content={adventure}></List>
     </View>
 
    
