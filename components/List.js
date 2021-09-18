@@ -33,9 +33,10 @@ class List extends React.PureComponent {
 const styles = StyleSheet.create({
 
     text: {
-        fontSize: 20,
+        fontSize: 25,
         fontWeight: 'bold',
         fontStyle: 'italic',
+        color:'#778899',
         paddingBottom: 20
 
     },
