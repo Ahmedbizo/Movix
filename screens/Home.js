@@ -57,41 +57,41 @@ const Home = () => {
     getData().then(
       
       ([
-        upcomingMovies,
-        popularMovies,
-        popularTv,
-        familyMovies,
-        actionMovies,
-        documentaryMovies,
-        animationMovies,
-        historyMovies,
-        adventure,
-        comedy,
-        crime,
+        upcomingMoviesData,
+        popularMoviesData,
+        popularTvData,
+        familyMoviesData,
+        actionMoviesData,
+        documentaryMoviesData,
+        animationMoviesData,
+        historyMoviesData,
+        adventureData,
+        comedyData,
+        crimeData,
 
 
     ]) => {
 
       const moviesImagesArray = [];
 
-        movies.forEach(movie => {
+      upcomingMoviesData.forEach(movie => {
             moviesImagesArray.push ('https://image.tmdb.org/t/p/w500' + movie.poster_path,)
             
         });
         
 
         setMoviesImages(moviesImagesArray);
-        setUpcomingMovies(upcomingMovies);
-        setPopularMovies(popularMovies);
-        setPopularTv(popularTv);
-        setFamilyMovies(familyMovies);
-        setActionMovies(actionMovies);
-        setDocumentaryMovies(documentaryMovies);
-        setAnimationMovies(animationMovies);
-        setHistoryMovies(historyMovies);
-        setAdventure(adventure);
-        setComedy(comedy);
-        setCrime(crime);
+        setUpcomingMovies(upcomingMoviesData);
+        setPopularMovies(popularMoviesData);
+        setPopularTv(popularTvData);
+        setFamilyMovies(familyMoviesData);
+        setActionMovies(actionMoviesData);
+        setDocumentaryMovies(documentaryMoviesData);
+        setAnimationMovies(animationMoviesData);
+        setHistoryMovies(historyMoviesData);
+        setAdventure(adventureData);
+        setComedy(comedyData);
+        setCrime(crimeData);
 
 
     },
@@ -100,6 +100,7 @@ const Home = () => {
       setError(err);
     });
 
+    
 
   } ,[] );
 
@@ -109,81 +110,57 @@ const Home = () => {
         <View>
             
             <ScrollView>
-            {moviesImages && ( <View style={styles.sliderContainer}>
-              <SliderBox dotStyle={styles.sliderStyle}images={moviesImages}  autoplay={true} circleLoop={true} sliderBoxHeight={dimensions.height / 1.5} />
-            </View>
-            )}
         <View style={styles.sliderContainer}>
       <SliderBox dotStyle={styles.sliderStyle}images={moviesImages}  autoplay={true} circleLoop={true} sliderBoxHeight={dimensions.height / 1.5} />
     </View>
     
-    {popularMovies && (<View style={styles.carousel}>
-      <List title= " Popular Movies  " content={popularMovies}></List>
-  </View>
-  )}
-    
 
-    { popularTv && (
-      <View style={styles.carousel}>
-      <List title= " Popular TV   " content={popularTv}></List>
-  </View>
-    )}
-   
-    { upcomingMovies && (
-      <View style={styles.carousel}>
-      <List title= " Up Coming Movies   " content={upcomingMovies}></List>
-  </View>
-    )}
-   
-{ familyMovies && (
-  <View style={styles.carousel}>
+    <View style={styles.carousel}>
+        <List title= " Popular Movies  " content={popularMovies}></List>
+    </View>
+
+    <View style={styles.carousel}>
+        <List title= " Popular TV   " content={popularTv}></List>
+    </View>
+
+    <View style={styles.carousel}>
+        <List title= " Up Coming Movies   " content={upcomingMovies}></List>
+    </View>
+
+    <View style={styles.carousel}>
         <List title= " Family Movies  " content={familyMovies}></List>
     </View>
-)}
-    
-    {actionMovies && (
-      <View style={styles.carousel}>
-      <List title= " Action Movies " content={actionMovies}></List>
-  </View>
-    )}
-   
 
-    {animationMovies && (
-      <View style={styles.carousel}>
-      <List title= " Animation Movies " content={animationMovies}></List>
-  </View>
-    )}
-   
-    {historyMovies && (
-      <View style={styles.carousel}>
-      <List title= " History Movies " content={historyMovies}></List>
-  </View>
-    )}
-   
-    {documentaryMovies && (
-      <View style={styles.carousel}>
-      <List title= " Documentary Movies  " content={documentaryMovies}></List>
-  </View>
-    )}
-   
-    {adventure  && (
-      <View style={styles.carousel}>
-      <List title= " Adventure"   content={adventure}></List>
-  </View>
-    )}
-   
+    <View style={styles.carousel}>
+        <List title= " Action Movies " content={actionMovies}></List>
+    </View>
 
-    {comedy  && (<View style={styles.carousel}>
+
+    <View style={styles.carousel}>
+        <List title= " Animation Movies " content={animationMovies}></List>
+    </View>
+
+    <View style={styles.carousel}>
+        <List title= " History Movies " content={historyMovies}></List>
+    </View>
+
+    <View style={styles.carousel}>
+        <List title= " Documentary Movies  " content={documentaryMovies}></List>
+    </View>
+
+    <View style={styles.carousel}>
+        <List title= " Adventure"   content={adventure}></List>
+    </View>
+
+
+    <View style={styles.carousel}>
     
-      <List title=" Comedy " content={comedy}></List>
-      </View>
-      )}
-    
-    {crime && (<View style={styles.carousel}>
-      <List title=" Crime Movies " content={crime}></List>
-  </View>
-  )}
-    
+    <List title=" Comedy " content={comedy}></List>
+    </View>
+
+    <View style={styles.carousel}>
+        <List title=" Crime Movies " content={crime}></List>
+    </View>
 
    
 
