@@ -160,10 +160,12 @@ const Home = () => {
   </View>
     )}
    
-    { && ()}
-    <View style={styles.carousel}>
-        <List title= " Documentary Movies  " content={documentaryMovies}></List>
-    </View>
+    {documentaryMovies && (
+      <View style={styles.carousel}>
+      <List title= " Documentary Movies  " content={documentaryMovies}></List>
+  </View>
+    )}
+   
     { && ()}
     <View style={styles.carousel}>
         <List title= " Adventure"   content={adventure}></List>
