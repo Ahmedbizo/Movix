@@ -25,12 +25,54 @@ const Home = () => {
     const [error,setError] = useState(false);
 
 
+
+
+     const getData = () => {
+       return Promise.all(
+      [
+      getUpcomingMovies(),
+      getPopularMovies(),
+      getPopularTv(),
+      getFamilyMovies(),
+      getActionMovies(),
+      getDocumentaryMovies(),
+      getAnimationMovies(),
+      getHistoryMovies(),
+      getAdventure(),
+      getComedy(),
+      getCrime()
+
+
+       ]);
+      
+      };
+
+
+
+
+
   //more performance to App (dont make the app load the Data alot of time)
   useEffect (( ) =>{
 
-    getUpcomingMovies().then(movies => {
+    getData().then(
+      
+      ([
+        upcomingMovies,
+        popularMovies,
+        popularTv,
+        familyMovies,
+        actionMovies,
+        documentaryMovies,
+        animationMovies,
+        historyMovies,
+        adventure,
+        comedy,
+        crime,
 
-        const moviesImagesArray = [];
+
+    ]) => {
+
+      const moviesImagesArray = [];
 
         movies.forEach(movie => {
             moviesImagesArray.push ('https://image.tmdb.org/t/p/w500' + movie.poster_path,)
@@ -39,87 +81,27 @@ const Home = () => {
         
 
         setMoviesImages(moviesImagesArray);
-      } ).catch(err =>{
-        setError(err);
-      } );
+        setUpcomingMovies(upcomingMovies);
+        setPopularMovies(popularMovies);
+        setPopularTv(popularTv);
+        setFamilyMovies(familyMovies);
+        setActionMovies(actionMovies);
+        setDocumentaryMovies(documentaryMovies);
+        setAnimationMovies(animationMovies);
+        setHistoryMovies(historyMovies);
+        setAdventure(adventure);
+        setComedy(comedy);
+        setCrime(crime);
 
 
-    getPopularMovies().then(movies => {
-     setPopularMovies(movies)
-    } ).catch(err =>{
+    },
+    
+    ).catch(err =>{
       setError(err);
-    } );
+    });
 
 
-    getPopularTv().then(movies => {
-        setPopularTv(movies)
-       } ).catch(err =>{
-         setError(err);
-       } );
-
-
-       getUpcomingMovies().then(movies => {
-        setUpcomingMovies(movies)
-       } ).catch(err =>{
-         setError(err);
-       } );
-
-
-       getFamilyMovies().then(movies => {
-        setFamilyMovies(movies)
-       } ).catch(err =>{
-         setError(err);
-       } );
-
-       getActionMovies().then(movies => {
-        setActionMovies(movies)
-       } ).catch(err =>{
-         setError(err);
-       } );
-
-
-       getDocumentaryMovies().then(movies => {
-        setDocumentaryMovies(movies)
-       } ).catch(err =>{
-         setError(err);
-       } );
-
-
-       getAnimationMovies().then(movies => {
-        setAnimationMovies(movies)
-       } ).catch(err =>{
-         setError(err);
-       } );
-
-
-       getHistoryMovies().then(movies => {
-        setHistoryMovies(movies)
-       } ).catch(err =>{
-         setError(err);
-       } );
-
-       getAdventure().then(movies => {
-        setAdventure(movies)
-       } ) . catch(err =>{
-           setError(err);
-       });
-
-       getComedy().then(movies =>{
-           setComedy(movies)
-       }) . catch(err => {
-           setError(err)
-       });
-
-       getCrime().then(movies => {
-           setCrime(movies)
-       }). catch(err => {
-           setError(err)
-       });
-
-      
-
-
-  } ,[] )
+  } ,[] );
 
 
     return (
