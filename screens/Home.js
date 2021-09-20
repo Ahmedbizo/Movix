@@ -123,46 +123,50 @@ const Home = () => {
   )}
     
 
-    { && ()}
-    <View style={styles.carousel}>
-        <List title= " Popular TV   " content={popularTv}></List>
-    </View>
-    { && ()}
-    <View style={styles.carousel}>
-        <List title= " Up Coming Movies   " content={upcomingMovies}></List>
-    </View>
-
+    { popularTv && (
+      <View style={styles.carousel}>
+      <List title= " Popular TV   " content={popularTv}></List>
+  </View>
+    )}
+   
+    { upcomingMovies && (
+      <View style={styles.carousel}>
+      <List title= " Up Coming Movies   " content={upcomingMovies}></List>
+  </View>
+    )}
+   
+{ && ()}
     <View style={styles.carousel}>
         <List title= " Family Movies  " content={familyMovies}></List>
     </View>
-
+    { && ()}
     <View style={styles.carousel}>
         <List title= " Action Movies " content={actionMovies}></List>
     </View>
 
-
+    { && ()}
     <View style={styles.carousel}>
         <List title= " Animation Movies " content={animationMovies}></List>
     </View>
-
+    { && ()}
     <View style={styles.carousel}>
         <List title= " History Movies " content={historyMovies}></List>
     </View>
-
+    { && ()}
     <View style={styles.carousel}>
         <List title= " Documentary Movies  " content={documentaryMovies}></List>
     </View>
-
+    { && ()}
     <View style={styles.carousel}>
         <List title= " Adventure"   content={adventure}></List>
     </View>
 
-
+    { && ()}
     <View style={styles.carousel}>
     
     <List title=" Comedy " content={comedy}></List>
     </View>
-
+    { && ()}
     <View style={styles.carousel}>
         <List title=" Crime Movies " content={crime}></List>
     </View>
