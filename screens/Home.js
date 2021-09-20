@@ -109,19 +109,21 @@ const Home = () => {
         <View>
             
             <ScrollView>
+            {moviesImages && ()}
         <View style={styles.sliderContainer}>
       <SliderBox dotStyle={styles.sliderStyle}images={moviesImages}  autoplay={true} circleLoop={true} sliderBoxHeight={dimensions.height / 1.5} />
     </View>
     
-
+    { && ()}
     <View style={styles.carousel}>
         <List title= " Popular Movies  " content={popularMovies}></List>
     </View>
 
+    { && ()}
     <View style={styles.carousel}>
         <List title= " Popular TV   " content={popularTv}></List>
     </View>
-
+    { && ()}
     <View style={styles.carousel}>
         <List title= " Up Coming Movies   " content={upcomingMovies}></List>
     </View>
