@@ -173,11 +173,12 @@ const Home = () => {
     )}
    
 
-    { && ()}
-    <View style={styles.carousel}>
+    {comedy  && (<View style={styles.carousel}>
     
-    <List title=" Comedy " content={comedy}></List>
-    </View>
+      <List title=" Comedy " content={comedy}></List>
+      </View>
+      )}
+    
     { && ()}
     <View style={styles.carousel}>
         <List title=" Crime Movies " content={crime}></List>
