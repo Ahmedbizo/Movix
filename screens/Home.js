@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { StyleSheet, Text, View, Dimensions, ScrollView } from 'react-native';
+import { ActivityIndicator, StyleSheet, Text, View, Dimensions, ScrollView } from 'react-native';
 import {getPopularMovies, getUpcomingMovies,getComedy, getAdventure, getHistoryMovies, getAnimationMovies, getPopularTv, getFamilyMovies, getDocumentaryMovies, getActionMovies, getCrime} from '../services/services';
 import { SliderBox } from "react-native-image-slider-box";
-import { react } from '@babel/types';
+import { declareTypeAlias, react } from '@babel/types';
 import List from '../components/List';
 
 
@@ -23,6 +23,7 @@ const Home = () => {
     const [comedy , setComedy] = useState ('');
     const [crime , setCrime] = useState ('');
     const [error,setError] = useState(false);
+    const [lodded,setLodded] = useState(true);
 
 
 
@@ -92,6 +93,7 @@ const Home = () => {
         setAdventure(adventureData);
         setComedy(comedyData);
         setCrime(crimeData);
+        setLodded(true)
 
 
     },
@@ -109,7 +111,8 @@ const Home = () => {
  
         <View>
             
-            <ScrollView>
+            {lodded && (
+              <ScrollView>
         <View style={styles.sliderContainer}>
       <SliderBox dotStyle={styles.sliderStyle}images={moviesImages}  autoplay={true} circleLoop={true} sliderBoxHeight={dimensions.height / 1.5} />
     </View>
@@ -166,6 +169,11 @@ const Home = () => {
 
     
     </ScrollView>
+
+            )}
+
+            {!lodded && <ActivityIndicator size="large" color="blue"  />}
+              
     </View>
         
     );
