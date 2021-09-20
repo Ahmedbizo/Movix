@@ -135,23 +135,31 @@ const Home = () => {
   </View>
     )}
    
-{ && ()}
-    <View style={styles.carousel}>
+{ familyMovies && (
+  <View style={styles.carousel}>
         <List title= " Family Movies  " content={familyMovies}></List>
     </View>
-    { && ()}
-    <View style={styles.carousel}>
-        <List title= " Action Movies " content={actionMovies}></List>
-    </View>
+)}
+    
+    {actionMovies && (
+      <View style={styles.carousel}>
+      <List title= " Action Movies " content={actionMovies}></List>
+  </View>
+    )}
+   
 
-    { && ()}
-    <View style={styles.carousel}>
-        <List title= " Animation Movies " content={animationMovies}></List>
-    </View>
-    { && ()}
-    <View style={styles.carousel}>
-        <List title= " History Movies " content={historyMovies}></List>
-    </View>
+    {animationMovies && (
+      <View style={styles.carousel}>
+      <List title= " Animation Movies " content={animationMovies}></List>
+  </View>
+    )}
+   
+    {historyMovies && (
+      <View style={styles.carousel}>
+      <List title= " History Movies " content={historyMovies}></List>
+  </View>
+    )}
+   
     { && ()}
     <View style={styles.carousel}>
         <List title= " Documentary Movies  " content={documentaryMovies}></List>
