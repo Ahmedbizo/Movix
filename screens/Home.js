@@ -157,13 +157,13 @@ const Home = ({navigation}) => {
     </View>
 
     <View style={styles.carousel}>
-        <List title= " Adventure"   content={adventure}></List>
+        <List  navigation={navigation} title= " Adventure"   content={adventure}></List>
     </View>
 
 
     <View style={styles.carousel}>
     
-    <List title=" Comedy " content={comedy}></List>
+    <List  navigation={navigation} title=" Comedy " content={comedy}></List>
     </View>
 
     <View style={styles.carousel}>
