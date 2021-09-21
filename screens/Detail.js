@@ -1,13 +1,13 @@
 import React from 'react';
-import { View, Text} from 'react-native';
+import { View, Text, StyleSheet} from 'react-native';
 
 
 
 const Detail = () => {
     return (
        <View>
-       <Text>
-       Details Screen
+       <Text style={styles.text}>
+       Movie Details 
        </Text>
        
       
@@ -17,5 +17,20 @@ const Detail = () => {
         
     );
 }
+
+const styles = StyleSheet.create({
+    text: {
+        fontSize: 25,
+        fontWeight: 'bold',
+        fontStyle: 'italic',
+        color:'#6495ed',
+        textAlign: 'center',
+        paddingTop:15
+         
+       
+
+    },
+
+});
 
 export default Detail;

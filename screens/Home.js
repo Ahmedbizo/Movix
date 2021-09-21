@@ -136,7 +136,7 @@ const Home = ({navigation}) => {
     </View>
 
     <View style={styles.carousel}>
-        <List title= " Family Movies  " content={familyMovies}></List>
+        <List navigation={navigation} title= " Family Movies  " content={familyMovies}></List>
     </View>
 
     <View style={styles.carousel}>
@@ -145,7 +145,7 @@ const Home = ({navigation}) => {
 
 
     <View style={styles.carousel}>
-        <List title= " Animation Movies " content={animationMovies}></List>
+        <List  navigation={navigation} title= " Animation Movies " content={animationMovies}></List>
     </View>
 
     <View style={styles.carousel}>
