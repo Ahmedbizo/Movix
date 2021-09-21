@@ -4,6 +4,7 @@ import {getPopularMovies, getUpcomingMovies,getComedy, getAdventure, getHistoryM
 import { SliderBox } from "react-native-image-slider-box";
 import { declareTypeAlias, react } from '@babel/types';
 import List from '../components/List';
+import Error from '../components/Error';
 
 
 
@@ -22,6 +23,8 @@ const Home = () => {
     const [adventure ,setAdventure] = useState('');
     const [comedy , setComedy] = useState ('');
     const [crime , setCrime] = useState ('');
+
+
     const [error,setError] = useState(false);
     const [lodded,setLodded] = useState(true);
 
@@ -93,13 +96,15 @@ const Home = () => {
         setAdventure(adventureData);
         setComedy(comedyData);
         setCrime(crimeData);
-        setLodded(true)
+        
 
 
     },
     
     ).catch(err =>{
       setError(err);
+    }).finally(() => {
+      setLodded(true);
     });
 
     
@@ -111,7 +116,7 @@ const Home = () => {
  
         <View>
             
-            {lodded && (
+            {lodded && !error && (
               <ScrollView>
         <View style={styles.sliderContainer}>
       <SliderBox dotStyle={styles.sliderStyle}images={moviesImages}  autoplay={true} circleLoop={true} sliderBoxHeight={dimensions.height / 1.5} />
@@ -173,6 +178,8 @@ const Home = () => {
             )}
 
             {!lodded && <ActivityIndicator size="large" color="blue"  />}
+            {! error && <Error  />}
+
               
     </View>
         
