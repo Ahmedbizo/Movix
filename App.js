@@ -1,8 +1,12 @@
 import React from 'react';
-import {  View } from 'react-native';
 import Home from './screens/Home';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { NavigationContainer } from '@react-navigation/native';
 
 
+
+
+const Stack = createNativeStackNavigator();
 
 
 const YourApp = () => {
@@ -10,14 +14,14 @@ const YourApp = () => {
   
   
   return (
-    <View style={{ flex: 1, 
-    justifyContent: "center",
-     alignItems: "center", 
-     backgroundColor:'#fffff0' }}>
 
-       <Home></Home>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Movix" component={Home} />
+      </Stack.Navigator>
+    </NavigationContainer>
 
-    </View>
+    
   );
 }
 

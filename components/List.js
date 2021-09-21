@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 const propTypes ={
     title: PropTypes.string,
-    content: PropTypes.object,
+    content: PropTypes.array,
 }
 
 class List extends React.PureComponent {
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
         fontSize: 25,
         fontWeight: 'bold',
         fontStyle: 'italic',
-        color:'#778899',
+        color:'#f8f8ff',
         paddingBottom: 20
 
     },
