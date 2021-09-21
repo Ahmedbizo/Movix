@@ -149,11 +149,11 @@ const Home = ({navigation}) => {
     </View>
 
     <View style={styles.carousel}>
-        <List title= " History Movies " content={historyMovies}></List>
+        <List  navigation={navigation} title= " History Movies " content={historyMovies}></List>
     </View>
 
     <View style={styles.carousel}>
-        <List title= " Documentary Movies  " content={documentaryMovies}></List>
+        <List navigation={navigation} title= " Documentary Movies  " content={documentaryMovies}></List>
     </View>
 
     <View style={styles.carousel}>
