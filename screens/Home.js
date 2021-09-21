@@ -167,7 +167,7 @@ const Home = ({navigation}) => {
     </View>
 
     <View style={styles.carousel}>
-        <List title=" Crime Movies " content={crime}></List>
+        <List  navigation={navigation} title=" Crime Movies " content={crime}></List>
     </View>
 
    
