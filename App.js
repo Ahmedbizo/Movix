@@ -19,7 +19,7 @@ const YourApp = () => {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Movix" component={Home} />
-        <Stack.Screen name="Details" component={Detail} />
+        <Stack.Screen name="Detail" component={Detail} />
       </Stack.Navigator>
     </NavigationContainer>
 

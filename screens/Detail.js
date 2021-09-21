@@ -7,11 +7,11 @@ const Detail = () => {
     return (
        <View>
        <Text>
-       
+       Details Screen
        </Text>
        
-       {'Details Screen'}
-       
+      
+
        </View>
 
         
