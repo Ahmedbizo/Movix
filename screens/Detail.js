@@ -1,9 +1,11 @@
 import React,{useState,useEffect} from 'react';
-import { View, Text, StyleSheet, ScrollView, Image } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Image, Dimensions } from 'react-native';
 import {getMovie} from '../services/services';
 
 
 const placeholderImage = require ('../assets/images/placeholder.png')
+
+const height = Dimensions.get ('screen').height;
 
 const Detail = ({route,navigation}) => {
 
@@ -46,10 +48,10 @@ const styles = StyleSheet.create ({
 
    
     image: {
-        height:450,
-        width:400,
+        height: height/1.8,
+       // width:400,
         
-        borderRadius:30,
+       // borderRadius:30,
         
     },
   
