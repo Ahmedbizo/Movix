@@ -35,7 +35,10 @@ const Detail = ({route,navigation}) => {
         }
         />
        
-       </ScrollView>)}
+       </ScrollView>
+       )}
+
+       {!lodded && <ActivityIndicator size="large" color="blue"  />}
       
 
        </React.Fragment>
