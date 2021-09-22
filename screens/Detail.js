@@ -34,6 +34,8 @@ const Detail = ({route,navigation}) => {
             :  placeholderImage
         }
         />
+
+        <Text>{movieDetail.title}</Text>
        
        </ScrollView>
        )}
