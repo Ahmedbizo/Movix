@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react';
-import { View, Text, StyleSheet} from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Image } from 'react-native';
 import {getMovie} from '../services/services';
 
 
@@ -20,8 +20,18 @@ const Detail = ({route,navigation}) => {
     return (
        <React.Fragment>
 
-       {lodded && (<Text>{movieDetail.title} </Text>)}
+       {lodded &&  (<ScrollView>
+
+        <Image style={styles.image} 
+        resizeMode='cover'
+        source={
+            movieDetail.poster_path 
+           ? {uri: 'https://image.tmdb.org/t/p/w500' + movieDetail.poster_path}
+            :  placeholderImage
+        }
+        />
        
+       </ScrollView>)}
       
 
        </React.Fragment>
@@ -30,18 +40,17 @@ const Detail = ({route,navigation}) => {
     );
 };
 
-const styles = StyleSheet.create({
-    text: {
-        fontSize: 25,
-        fontWeight: 'bold',
-        fontStyle: 'italic',
-        color:'#6495ed',
-        textAlign: 'center',
-        paddingTop:15
-         
-       
+const styles = StyleSheet.create ({
 
+   
+    image: {
+        height:450,
+        width:400,
+        
+        borderRadius:30,
+        
     },
+  
 
 });
 
