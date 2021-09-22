@@ -3,16 +3,17 @@ import { View, Text, StyleSheet} from 'react-native';
 
 
 
-const Detail = () => {
+const Detail = ({route,navigation}) => {
+
+    const movieDetail = route.params.movieDetail;
     return (
-       <View>
+       <React.Fragment>
        <Text style={styles.text}>
-       Movie Details 
-       </Text>
+       {movieDetail.title } </Text>
        
       
 
-       </View>
+       </React.Fragment>
 
         
     );
