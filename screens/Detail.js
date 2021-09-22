@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react';
-import { View, Text, StyleSheet, ScrollView, Image, Dimensions } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Image, Dimensions, ActivityIndicator } from 'react-native';
 import {getMovie} from '../services/services';
 
 
