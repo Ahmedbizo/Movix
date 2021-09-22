@@ -3,6 +3,8 @@ import { View, Text, StyleSheet, ScrollView, Image } from 'react-native';
 import {getMovie} from '../services/services';
 
 
+const placeholderImage = require ('../assets/images/placeholder.png')
+
 const Detail = ({route,navigation}) => {
 
     const movieId = route.params.movieDetail.id;
