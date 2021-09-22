@@ -1,15 +1,26 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import { View, Text, StyleSheet} from 'react-native';
-
+import {getMovie} from '../services/services';
 
 
 const Detail = ({route,navigation}) => {
 
-    const movieDetail = route.params.movieDetail;
+    const movieId = route.params.movieDetail.id;
+    const [movieDetail, setMovieDetail] = useState();
+    const [lodded,setLodded] = useState(false);
+
+
+    useEffect (() => {
+        getMovie(movieId).then(movieData => {
+            setMovieDetail(movieData);
+            setLodded(true);
+        });
+    },[movieId]);
+    
     return (
        <React.Fragment>
-       <Text style={styles.text}>
-       {movieDetail.title } </Text>
+
+       {lodded && (<Text>{movieDetail.title} </Text>)}
        
       
 
@@ -17,7 +28,7 @@ const Detail = ({route,navigation}) => {
 
         
     );
-}
+};
 
 const styles = StyleSheet.create({
     text: {
