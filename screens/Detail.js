@@ -9,7 +9,7 @@ const height = Dimensions.get ('screen').height;
 
 const Detail = ({route,navigation}) => {
 
-    const movieId = route.params.movieDetail.id;
+    const movieId = route.params.movieId;
     const [movieDetail, setMovieDetail] = useState();
     const [lodded,setLodded] = useState(false);
 
