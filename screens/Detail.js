@@ -36,6 +36,26 @@ const Detail = ({route,navigation}) => {
         />
         <View style={styles.container} >
         <Text style={styles.imageTitle}>{movieDetail.title}</Text>
+
+
+        {/* get all the gnre from API with Map function    */}
+        {movieDetail.genres && (
+
+         <View >
+        {movieDetail.genres.map(genre => {
+
+            return(
+
+                <Text key= {genre.id} >{genre.name} </Text>
+            )
+         })}
+        
+         </View>
+
+        )}
+       
+
+
         </View>
        </ScrollView>
        )}
