@@ -35,7 +35,7 @@ const Detail = ({route,navigation}) => {
         }
         />
         <View >
-        <Text style={styles.imageText}>{movieDetail.title}</Text>
+        <Text style={styles.imageTitle}>{movieDetail.title}</Text>
         </View>
        </ScrollView>
        )}
@@ -50,10 +50,11 @@ const Detail = ({route,navigation}) => {
 };
 
 const styles = StyleSheet.create ({
-    imageText:{ 
+    imageTitle:{ 
         fontSize: 24,
         marginTop:10,
         marginBottom: 10,
+        fontWeight: 'bold'
 
     },
    
