@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import { View, Text, StyleSheet, ScrollView, Image, Dimensions, ActivityIndicator } from 'react-native';
 import {getMovie} from '../services/services';
-import StarRating from 'react-native-star-rating';
+
 
 
 const placeholderImage = require ('../assets/images/placeholder.png')
@@ -54,7 +54,7 @@ const Detail = ({route,navigation}) => {
          </View>
 
         )}
-        <StarRating  maxStars={5} rating={movieDetail.vote_average}/ > 
+        <Text style={styles.Rating} > {movieDetail.vote_average}</Text>
        
        
 
@@ -109,6 +109,14 @@ const styles = StyleSheet.create ({
         fontStyle: 'italic',
         color: '#800080'
     },
+    Rating:{
+        fontSize: 15,
+        marginRight: 10,
+        fontStyle: 'italic',
+        color: '#800080',
+        marginTop: 17
+
+    }
 
    
 

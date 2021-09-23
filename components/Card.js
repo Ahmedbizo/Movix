@@ -1,7 +1,7 @@
 import React from 'react';
 import {TouchableOpacity, StyleSheet, Image,Text} from 'react-native';
 import PropTypes from 'prop-types';
-import { Colors } from 'react-native/Libraries/NewAppScreen';
+
 
 
 const placeholderImage = require ('../assets/images/placeholder.png')
