@@ -53,6 +53,8 @@ const Detail = ({route,navigation}) => {
          </View>
 
         )}
+        <Text>{movieDetail.vote_average} </Text>
+        <Text>{movieDetail.vote_count} </Text>
        
 
 
@@ -87,7 +89,7 @@ const styles = StyleSheet.create ({
     },
    
     image: {
-        height: height/1.8,
+        height: height/2,
        // width:400,
         
        // borderRadius:30,
@@ -96,14 +98,15 @@ const styles = StyleSheet.create ({
     gnrescontainer:{
 
         flexDirection: 'row',
+        alignContent:'center',
         fontWeight: 'bold',
-        marginTop:20
+        marginTop:25
     },
     gnrestitle: {
         fontSize: 15,
         marginRight: 10,
         fontStyle: 'italic',
-        color: '#808080'
+        color: '#800080'
     }
   
 

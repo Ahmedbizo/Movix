@@ -140,7 +140,7 @@ const Home = ({navigation}) => {
     </View>
 
     <View style={styles.carousel}>
-        <List title= " Action Movies " content={actionMovies}></List>
+        <List  navigation={navigation} title= " Action Movies " content={actionMovies}></List>
     </View>
 
 
