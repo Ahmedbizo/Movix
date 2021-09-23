@@ -34,9 +34,9 @@ const Detail = ({route,navigation}) => {
             :  placeholderImage
         }
         />
-
-        <Text>{movieDetail.title}</Text>
-       
+        <View >
+        <Text style={styles.imageText}>{movieDetail.title}</Text>
+        </View>
        </ScrollView>
        )}
 
@@ -50,7 +50,12 @@ const Detail = ({route,navigation}) => {
 };
 
 const styles = StyleSheet.create ({
+    imageText:{ 
+        fontSize: 24,
+        marginTop:10,
+        marginBottom: 10,
 
+    },
    
     image: {
         height: height/1.8,
