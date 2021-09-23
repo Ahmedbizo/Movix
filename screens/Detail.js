@@ -41,12 +41,12 @@ const Detail = ({route,navigation}) => {
         {/* get all the gnre from API with Map function    */}
         {movieDetail.genres && (
 
-         <View >
+         <View   style={styles.gnrescontainer}>
         {movieDetail.genres.map(genre => {
 
             return(
 
-                <Text key= {genre.id} >{genre.name} </Text>
+                <Text  style={styles.gnrestitle} key= {genre.id} >{genre.name} </Text>
             )
          })}
         
@@ -79,7 +79,7 @@ const styles = StyleSheet.create ({
     
     imageTitle:{ 
         fontSize: 24,
-        marginTop:10,
+        marginTop:15,
         marginBottom: 10,
         fontWeight: 'bold',
         
@@ -93,6 +93,18 @@ const styles = StyleSheet.create ({
        // borderRadius:30,
         
     },
+    gnrescontainer:{
+
+        flexDirection: 'row',
+        fontWeight: 'bold',
+        marginTop:20
+    },
+    gnrestitle: {
+        fontSize: 15,
+        marginRight: 10,
+        fontStyle: 'italic',
+        color: '#808080'
+    }
   
 
 });
