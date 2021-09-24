@@ -1,7 +1,8 @@
 import React,{useState,useEffect} from 'react';
 import { View, Text, StyleSheet, ScrollView, Image, Dimensions, ActivityIndicator } from 'react-native';
 import {getMovie} from '../services/services';
-
+import AntDesign from 'react-native-vector-icons/AntDesign'
+import StarRating from 'react-native-star-rating';
 
 
 const placeholderImage = require ('../assets/images/placeholder.png')
@@ -54,9 +55,9 @@ const Detail = ({route,navigation}) => {
          </View>
 
         )}
-        <Text style={styles.Rating} > {movieDetail.vote_average}</Text>
-       
-       
+        <Text style={styles.Rating} >  {movieDetail.vote_average}</Text>
+        <AntDesign name='smileo' size={30}/>
+       <StarRating>{movieDetail.vote_average}</StarRating>
 
 
         </View>
