@@ -56,7 +56,7 @@ const Detail = ({route,navigation}) => {
 
         )}
         <Text style={styles.Rating} >  {movieDetail.vote_average}</Text>
-        <AntDesign name='smileo' size={30}/>
+        <AntDesign name='eye' size={30}/>
        <StarRating>{movieDetail.vote_average}</StarRating>
 
 
