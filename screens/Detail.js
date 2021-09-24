@@ -56,7 +56,7 @@ const Detail = ({route,navigation}) => {
 
         )}
         <Text style={styles.Rating} >  {movieDetail.vote_average}</Text>
-        <AntDesign name='eye' size={30}/>
+        
        <StarRating>{movieDetail.vote_average}</StarRating>
 
 
@@ -105,7 +105,7 @@ const styles = StyleSheet.create ({
         marginTop:25
     },
     gnrestitle: {
-        fontSize: 15,
+        fontSize: 18,
         marginRight: 10,
         fontStyle: 'italic',
         color: '#800080'
