@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import { View, Text, StyleSheet, ScrollView, Image, Dimensions, ActivityIndicator } from 'react-native';
 import {getMovie} from '../services/services';
-import AntDesign from 'react-native-vector-icons/AntDesign'
+
 import StarRating from 'react-native-star-rating';
 import dateFormat from 'dateformat';
 import PlayButton from '../components/PlayButton';
