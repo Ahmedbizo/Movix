@@ -65,9 +65,9 @@ const Detail = ({route,navigation}) => {
         rating={movieDetail.vote_average /2} 
         fullStarColor={'gold'} />
 
-        <Text>{movieDetail.overview}</Text>
+        <Text style={styles.overview}>{movieDetail.overview}</Text>
 
-        <Text>{ 'Release Date : ' + movieDetail.release_date}</Text>
+        <Text style={styles.release}>{ 'Release Date : ' + movieDetail.release_date}</Text>
 
 
         </View>
@@ -131,6 +131,16 @@ const styles = StyleSheet.create ({
         marginBottom: 15
 
     } */
+
+    overview: {
+        padding: 15
+    },
+
+    release: {
+
+        fontWeight: 'bold',
+        color: '#696969'
+    }
 
    
 
