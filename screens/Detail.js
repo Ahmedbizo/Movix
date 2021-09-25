@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react';
-import { View, Text, StyleSheet, ScrollView, Image, Dimensions, ActivityIndicator } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Image, Dimensions, ActivityIndicator, Modal } from 'react-native';
 import {getMovie} from '../services/services';
 
 import StarRating from 'react-native-star-rating';
@@ -15,6 +15,7 @@ const Detail = ({route,navigation}) => {
     const movieId = route.params.movieId;
     const [movieDetail, setMovieDetail] = useState();
     const [lodded,setLodded] = useState(false);
+    const [modalVisible, setModalVisible] = useState(false);
 
 
     useEffect (() => {
@@ -27,7 +28,10 @@ const Detail = ({route,navigation}) => {
     return (
        <React.Fragment>
 
-       {lodded &&  (<ScrollView>
+       {lodded &&  (  
+         
+        <View>
+        <ScrollView>
 
         <Image style={styles.image} 
         resizeMode='cover'
@@ -81,6 +85,12 @@ const Detail = ({route,navigation}) => {
 
         </View>
        </ScrollView>
+
+       <Modal animationType="slide" visible={modalVisible}>
+       
+       </Modal>
+
+       </View>
        )}
 
        {!lodded && <ActivityIndicator size="large" color="blue"  />}
