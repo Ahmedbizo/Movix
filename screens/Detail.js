@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, ScrollView, Image, Dimensions, ActivityIndicato
 import {getMovie} from '../services/services';
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import StarRating from 'react-native-star-rating';
+import dateFormat from 'dateformat';
 
 
 const placeholderImage = require ('../assets/images/placeholder.png')
@@ -67,7 +68,7 @@ const Detail = ({route,navigation}) => {
 
         <Text style={styles.overview}>{movieDetail.overview}</Text>
 
-        <Text style={styles.release}>{ 'Release Date : ' + movieDetail.release_date}</Text>
+        <Text style={styles.release}>{ 'Release Date : ' + dateFormat(movieDetail.release_date, ' dS mmmm, yyyy' ) }</Text>
 
 
         </View>
