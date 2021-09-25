@@ -4,7 +4,7 @@ import {getMovie} from '../services/services';
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import StarRating from 'react-native-star-rating';
 import dateFormat from 'dateformat';
-
+import PlayButton from '../components/PlayButton';
 
 const placeholderImage = require ('../assets/images/placeholder.png')
 
@@ -38,6 +38,14 @@ const Detail = ({route,navigation}) => {
         }
         />
         <View style={styles.container} >
+
+
+
+        <View>
+        <PlayButton/>
+        </View>
+
+
         <Text style={styles.imageTitle}>{movieDetail.title}</Text>
 
 
@@ -134,13 +142,15 @@ const styles = StyleSheet.create ({
     } */
 
     overview: {
-        padding: 15
+        padding: 15,
+        fontSize: 15
     },
 
     release: {
 
         fontWeight: 'bold',
-        color: '#696969'
+        color: '#696969',
+        fontSize: 16
     }
 
    
