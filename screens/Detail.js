@@ -57,7 +57,7 @@ const Detail = ({route,navigation}) => {
         )}
         <Text style={styles.Rating} >  {movieDetail.vote_average}</Text>
         
-       <StarRating>{movieDetail.vote_average}</StarRating>
+       <StarRating maxStars={5} rating={movieDetail.vote_average /2}  />
 
 
         </View>
