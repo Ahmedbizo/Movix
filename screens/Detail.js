@@ -55,6 +55,8 @@ const Detail = ({route,navigation}) => {
          </View>
 
         )}
+
+        {/* Text Rating  */}
        {/* <Text style={styles.Rating} >  {movieDetail.vote_average}</Text>*/}
         
        <StarRating 
@@ -64,6 +66,8 @@ const Detail = ({route,navigation}) => {
         fullStarColor={'gold'} />
 
         <Text>{movieDetail.overview}</Text>
+
+        <Text>{ 'Release Date : ' + movieDetail.release_date}</Text>
 
 
         </View>
