@@ -57,7 +57,11 @@ const Detail = ({route,navigation}) => {
         )}
         <Text style={styles.Rating} >  {movieDetail.vote_average}</Text>
         
-       <StarRating maxStars={5} rating={movieDetail.vote_average /2}  />
+       <StarRating 
+       maxStars={5}
+       starSize={30}
+        rating={movieDetail.vote_average /2} 
+        fullStarColor={'gold'} />
 
 
         </View>
@@ -115,7 +119,8 @@ const styles = StyleSheet.create ({
         marginRight: 10,
         fontStyle: 'italic',
         color: '#800080',
-        marginTop: 17
+        marginTop: 17,
+        marginBottom: 15
 
     }
 
