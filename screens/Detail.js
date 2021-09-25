@@ -55,13 +55,15 @@ const Detail = ({route,navigation}) => {
          </View>
 
         )}
-        <Text style={styles.Rating} >  {movieDetail.vote_average}</Text>
+       {/* <Text style={styles.Rating} >  {movieDetail.vote_average}</Text>*/}
         
        <StarRating 
        maxStars={5}
        starSize={30}
         rating={movieDetail.vote_average /2} 
         fullStarColor={'gold'} />
+
+        <Text>{movieDetail.overview}</Text>
 
 
         </View>
@@ -106,7 +108,8 @@ const styles = StyleSheet.create ({
         flexDirection: 'row',
         alignContent:'center',
         fontWeight: 'bold',
-        marginTop:25
+        marginTop:25,
+        marginBottom: 15
     },
     gnrestitle: {
         fontSize: 18,
@@ -114,7 +117,8 @@ const styles = StyleSheet.create ({
         fontStyle: 'italic',
         color: '#800080'
     },
-    Rating:{
+    
+  /*  Rating:{
         fontSize: 15,
         marginRight: 10,
         fontStyle: 'italic',
@@ -122,7 +126,7 @@ const styles = StyleSheet.create ({
         marginTop: 17,
         marginBottom: 15
 
-    }
+    } */
 
    
 
