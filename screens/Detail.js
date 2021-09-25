@@ -41,7 +41,7 @@ const Detail = ({route,navigation}) => {
 
 
 
-        <View>
+        <View style={styles.playButton}>
         <PlayButton/>
         </View>
 
@@ -151,6 +151,11 @@ const styles = StyleSheet.create ({
         fontWeight: 'bold',
         color: '#696969',
         fontSize: 16
+    },
+    playButton:{
+        position:'absolute',
+        top: -25,
+        right:20
     }
 
    

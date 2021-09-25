@@ -7,7 +7,7 @@ class PlayButton extends React.PureComponent {
    
     return (
       <Pressable style={styles.button}>
-        <Icon name={'caret-forward-outline'} size={30} color={'#fff'} />
+        <Icon name={'caret-forward-outline'} size={37} color={'#fff'} />
       </Pressable>
     );
   }
@@ -16,10 +16,10 @@ class PlayButton extends React.PureComponent {
 const styles = StyleSheet.create({
   button: {
     alignContent: 'center',
-    borderRadius: 50,
-    width: 50,
+    borderRadius: 60,
+    width: 53,
     padding: 10,
-    backgroundColor: '#4481FC',
+    backgroundColor: '#ff4500',
   },
 });
 
