@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react';
-import { View, Text, StyleSheet, ScrollView, Image, Dimensions, ActivityIndicator, Modal } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Image, Dimensions, ActivityIndicator, Modal, Pressable } from 'react-native';
 import {getMovie} from '../services/services';
 
 import StarRating from 'react-native-star-rating';
@@ -24,6 +24,10 @@ const Detail = ({route,navigation}) => {
             setLodded(true);
         });
     },[movieId]);
+
+    const videoShown = () => {
+        setModalVisible(!modalVisible);
+    };
     
     return (
        <React.Fragment>
@@ -46,7 +50,7 @@ const Detail = ({route,navigation}) => {
 
 
         <View style={styles.playButton}>
-        <PlayButton/>
+        <PlayButton handlePress={videoShown}/>
         </View>
 
 
@@ -87,7 +91,11 @@ const Detail = ({route,navigation}) => {
        </ScrollView>
 
        <Modal animationType="slide" visible={modalVisible}>
-       
+
+       <View style={styles.videoModal}>
+
+       <Pressable onPress={() => videoShown()}><Text style={styles.modalText}>{' Hide Modal'}</Text></Pressable>
+       </View>
        </Modal>
 
        </View>
@@ -166,6 +174,17 @@ const styles = StyleSheet.create ({
         position:'absolute',
         top: -25,
         right:20
+    },
+    videoModal: {
+
+        flex: 1,
+        justifyContent: 'center',
+        alignItems:'center',
+       
+    },
+    modalText:{
+        fontSize: 25,
+        fontWeight: 'bold'
     }
 
    
