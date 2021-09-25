@@ -5,6 +5,9 @@ import {getMovie} from '../services/services';
 import StarRating from 'react-native-star-rating';
 import dateFormat from 'dateformat';
 import PlayButton from '../components/PlayButton';
+import VideoPlayer from 'react-native-video-controls';
+
+
 
 const placeholderImage = require ('../assets/images/placeholder.png')
 
@@ -94,7 +97,16 @@ const Detail = ({route,navigation}) => {
 
        <View style={styles.videoModal}>
 
-       <Pressable onPress={() => videoShown()}><Text style={styles.modalText}>{' Hide Modal'}</Text></Pressable>
+       <VideoPlayer
+
+         onBack= {() => {
+             videoShown();
+        }}
+        navigator={navigation}
+            source={{uri: 'https://vjs.zencdn.net/v/oceans.mp4'}}
+           
+            />
+       
        </View>
        </Modal>
 
