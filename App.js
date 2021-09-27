@@ -25,6 +25,7 @@ const YourApp = () => {
         component={Home}
          options={{
         headerTransparent: true,
+        header: ({navigation}) => <NavBar navigation={navigation} main={true}/>
 
         }} />
 
@@ -32,7 +33,7 @@ const YourApp = () => {
         component={Detail} 
         options={{
         headerTransparent: true,
-        header: () => <NavBar/>,
+        header: ({navigation}) => <NavBar navigation={navigation}/>
         }}/>
       </Stack.Navigator>
     </NavigationContainer>
