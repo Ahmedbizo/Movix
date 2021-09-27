@@ -21,7 +21,11 @@ const YourApp = () => {
         <Stack.Screen name="Movix" component={Home} options={{
           headerTransparent: true,
         }} />
-        <Stack.Screen name="Detail" component={Detail} />
+        <Stack.Screen name="Detail" 
+        component={Detail} 
+        options={{
+        headerTransparent: true,
+        }}/>
       </Stack.Navigator>
     </NavigationContainer>
 
