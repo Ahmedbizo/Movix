@@ -12,6 +12,8 @@ const Video = ({onClose}) => {
             onClose();
        }}
        onEnd={() => onClose()}
+
+       fullscreenOrientation = "all"
       
            source={{uri: 'https://vjs.zencdn.net/v/oceans.mp4'}}
           

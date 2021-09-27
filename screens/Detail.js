@@ -93,7 +93,7 @@ const Detail = ({route,navigation}) => {
         </View>
        </ScrollView>
 
-       <Modal animationType="slide" visible={modalVisible}>
+       <Modal supportedOrientations= {['portrait','landscape']} animationType="slide" visible={modalVisible}>
 
        <View style={styles.videoModal}>
 
