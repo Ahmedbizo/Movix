@@ -185,7 +185,7 @@ const styles = StyleSheet.create ({
     playButton:{
         position:'absolute',
         top: -25,
-        right:20
+        right:10
     },
     videoModal: {
 
