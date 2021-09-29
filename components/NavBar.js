@@ -31,11 +31,11 @@ class NavBar extends React.PureComponent {
                     style={styles.logo}
                     source={require('../assets/images/logo.jpg')}
                   />
-                  <TouchableOpacity
+                  <TouchableOpacity 
                     onPress={() => {
                       navigation.navigate('Search');
                     }}>
-                    <Icon name={'search-outline'} size={30} color={'red'} />
+                    <Icon name={'search-outline'} size={80} color={'red'} />
                   </TouchableOpacity>
                 </View>
               ) : (
@@ -45,6 +45,7 @@ class NavBar extends React.PureComponent {
                       navigation.goBack();
                     }}>
                     <Icon name={'chevron-back'} size={40} color={'red'} />
+                    
                   </TouchableOpacity>
                 </View>
               )}
@@ -68,6 +69,7 @@ const styles = StyleSheet.create({
       height: 30,
       marginBottom:20
     },
+   
   });
 
 
