@@ -1,21 +1,34 @@
-import React from 'react';
-import { SafeAreaView, TextInput, View, StyleSheet } from 'react-native';
+import React, { useState } from 'react';
+import { SafeAreaView, TextInput, View, StyleSheet, TouchableOpacity } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 
 
 const search = ({navigation}) => {
+
+    const [text, onChangeText] = useState();
     return (
         <React.Fragment>
         
         <SafeAreaView>
         
-        <View>
+        <View style={styles.container}>
+        <View style={styles.form}>
         <TextInput
         style={styles.input}
+        placeholder={'Search Movie or TV Show '}
         onChangeText={onChangeText}
         value={text}
       />
-        
+      </View>
+
+      <TouchableOpacity 
+                    onPress={() => {
+                      
+                    }}>
+                    <Icon name={'search-outline'} size={50}  />
+                  </TouchableOpacity>
+
         </View>
         </SafeAreaView>
 
@@ -25,11 +38,22 @@ const search = ({navigation}) => {
 
 const styles = StyleSheet.create({
     input: {
-      height: 40,
-      margin: 12,
-      borderWidth: 1,
-      padding: 10,
+      borderRadius: 20,
+      borderWidth: 2,
+      padding: 15,
     },
+    container: {
+        padding:10,
+        paddingTop: 10,
+        flexDirection: 'row',
+        alignItems:'center'
+    },
+    form: {
+        flexBasis: 'auto',
+        flexGrow: 1,
+        paddingRight: 8
+
+    }
   });
   
 
