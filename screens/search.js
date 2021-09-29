@@ -7,6 +7,10 @@ import Icon from 'react-native-vector-icons/Ionicons';
 const search = ({navigation}) => {
 
     const [text, onChangeText] = useState();
+
+    const onsubmit = (query) => {
+        console.log(query)
+    }
     return (
         <React.Fragment>
         
@@ -23,9 +27,7 @@ const search = ({navigation}) => {
       </View>
 
       <TouchableOpacity 
-                    onPress={() => {
-                      
-                    }}>
+                    onPress={() => {onsubmit(text)}}>
                     <Icon name={'search-outline'} size={50}  />
                   </TouchableOpacity>
 
