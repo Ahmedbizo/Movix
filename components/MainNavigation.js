@@ -14,7 +14,7 @@ class MainNavigation extends React.PureComponent {
     render() {
         return (
             
-            <Stack.Navigator>
+            <Stack.Navigator headerMode={'screen'}>
             <Stack.Screen name="Movix" 
             component={Home}
              options={{

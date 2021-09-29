@@ -24,8 +24,8 @@ class NavBar extends React.PureComponent {
 
         const {navigation,main} = this.props;
         return (
-            <SafeAreaView>
-            {main ? (
+            <SafeAreaView >
+            { main ? (
                 <View style={styles.mainNav}>
                   <Image
                     style={styles.logo}
@@ -67,8 +67,9 @@ const styles = StyleSheet.create({
     logo: {
       width: 40,
       height: 30,
-      marginBottom:20
+      marginBottom:23
     },
+   
    
   });
 

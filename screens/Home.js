@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { ActivityIndicator, StyleSheet, Text, View, Dimensions, ScrollView } from 'react-native';
+import { ActivityIndicator, StyleSheet, View, Dimensions, ScrollView } from 'react-native';
 import {getPopularMovies, getUpcomingMovies,getComedy, getAdventure, getHistoryMovies, getAnimationMovies, getPopularTv, getFamilyMovies, getDocumentaryMovies, getActionMovies, getCrime} from '../services/services';
 import { SliderBox } from "react-native-image-slider-box";
-import { declareTypeAlias, react } from '@babel/types';
+
 import List from '../components/List';
 import Error from '../components/Error';
 
@@ -119,7 +119,7 @@ const Home = ({navigation}) => {
             {lodded && !error && (
               <ScrollView>
         <View style={styles.sliderContainer}>
-      <SliderBox dotStyle={styles.sliderStyle}images={moviesImages}  autoplay={true} circleLoop={true} sliderBoxHeight={dimensions.height / 1.5} />
+      <SliderBox dotStyle={styles.sliderStyle}images={moviesImages}  autoplay={true} circleLoop={true} sliderBoxHeight={dimensions.height / 1.6} />
     </View>
     
 
