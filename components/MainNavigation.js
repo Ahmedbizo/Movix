@@ -20,6 +20,7 @@ class MainNavigation extends React.PureComponent {
             component={Home}
              options={{
             headerTransparent: true,
+           
             header: ({navigation}) => <NavBar navigation={navigation} main={true}/>
     
             }} />

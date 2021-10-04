@@ -36,7 +36,8 @@ const styles = StyleSheet.create({
         fontSize: 25,
         fontWeight: 'bold',
         fontStyle: 'italic',
-        color:'#f8f8ff',
+        color:'#276678',
+        paddingRight:10,
         paddingBottom: 20
 
     },

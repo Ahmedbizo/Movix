@@ -130,7 +130,7 @@ const Home = ({navigation}) => {
             {lodded && !error && (
               <ScrollView>
         <View style={styles.sliderContainer}>
-      <SliderBox dotStyle={styles.sliderStyle}images={moviesImages}  autoplay={true} circleLoop={true} sliderBoxHeight={dimensions.height / 1.6} />
+      <SliderBox dotStyle={styles.sliderStyle}images={moviesImages}  autoplay={true} circleLoop={true} sliderBoxHeight={dimensions.height / 1.5} />
     </View>
     
 
@@ -212,7 +212,7 @@ const styles = StyleSheet.create({
       },
 
       sliderStyle: {
-          height:0
+          height: 0
 
       },
       
@@ -221,7 +221,7 @@ const styles = StyleSheet.create({
         flex: 1, 
         justifyContent: "center",
          alignItems: "center", 
-         backgroundColor:'orange',
+         backgroundColor:'#F6F5F5',
          
       }
 
